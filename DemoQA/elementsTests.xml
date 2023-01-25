@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Demo QA">
+  <test name="Test Basics 1">
+  	<parameter name="widgetName" value="Elements" />
+  	<parameter name="textbox" value="Text Box" />
+  	<parameter name="checkbox" value="Check Box" />
+    <parameter name="options" value="Desktop::Notes" />
+      <classes>
+         <class name="com.demoQA.tests.ElementsTest"/>
+      </classes>
+  </test> <!-- Test --> 
+</suite> <!-- Suite -->

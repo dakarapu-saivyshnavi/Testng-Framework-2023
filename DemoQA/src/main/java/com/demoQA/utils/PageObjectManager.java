@@ -3,6 +3,7 @@ package com.demoQA.utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
+import com.demoQA.pages.CheckBoxPage;
 import com.demoQA.pages.HomePage;
 import com.demoQA.pages.TextBoxPage;
 
@@ -13,6 +14,8 @@ public class PageObjectManager {
 	
 	private TextBoxPage textboxpage;
 	
+	private CheckBoxPage checkboxpage;
+	
 	public PageObjectManager(WebDriver driver){
 		this.driver=driver;
 	}
@@ -22,5 +25,9 @@ public class PageObjectManager {
 	}
 	public TextBoxPage getTextBoxPage(){
 		return(textboxpage==null) ? (textboxpage = PageFactory.initElements(driver, TextBoxPage.class)):textboxpage;
+	}
+	
+	public CheckBoxPage getCheckBoxpage(){
+		return(checkboxpage==null) ? (checkboxpage = PageFactory.initElements(driver, CheckBoxPage.class)):checkboxpage;
 	}
 }
